@@ -18,7 +18,22 @@ namespace Business.Concrete
 
         public void Add(Car car)
         {
-            _carDal.Add(car);
+            if (car.Description.Length  >2)
+            {
+                if (car.DailyPrice>0)
+                {
+                    _carDal.Add(car);
+                }
+                else
+                {
+                    Console.WriteLine("Günlük fiyatı 0TL'den fazla olmalıdır");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Araba açıklaması 2 karakterden uzun olmalıdır");
+            }
+            
         }
 
         public void Delete(Car car)
