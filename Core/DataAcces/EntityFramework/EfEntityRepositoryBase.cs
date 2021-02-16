@@ -50,6 +50,11 @@ namespace Core.DataAcces.EntityFramework
             }
         }
 
+        public void Update(TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Uptade(TEntity entity)
         {
             using (TContext context = new TContext())

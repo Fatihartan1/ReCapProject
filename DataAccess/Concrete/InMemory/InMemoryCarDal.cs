@@ -71,6 +71,11 @@ namespace DataAccess.Concrete.InMemory
             return _cars.OrderBy(p => p.DailyPrice).ToList();
         }
 
+        public void Update(Car entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Uptade(Car car)
         {
             Car CarsToUpdate = _cars.SingleOrDefault(p => p.Id == car.Id);

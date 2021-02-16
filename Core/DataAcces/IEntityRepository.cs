@@ -12,6 +12,6 @@ namespace Core.DataAcces
         List<T> GetAll(Expression<Func<T,bool>> filter=null);
         void Add(T entity);
         void Delete(T entity);
-        void Uptade(T entity);
+        void Update(T entity);
     }
 }
